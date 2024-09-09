@@ -1,0 +1,28 @@
+a {
+    color: inherit;
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+.badge,
+.btn {
+    letter-spacing: .1em;
+}
+
+p {
+    letter-spacing: .05em; //依文字大小調整字距
+}
