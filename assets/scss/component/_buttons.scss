@@ -1,0 +1,184 @@
+.btn-irun {
+    @include button-variant($background: transparent,
+        $border: transparent,
+        $color: $white,
+        $hover-background: transparent,
+        $hover-border: transparent,
+        $hover-color: $white,
+        $active-background: map-get($theme-colors, 'primary-500'),
+        $active-border: transparent,
+        $active-color: $white,
+        $disabled-background: #dcdcdc,
+        $disabled-border: transparent,
+        $disabled-color: $white);
+    background-image: linear-gradient(90deg,
+            #53e4f4 0%,
+            map-get($theme-colors, 'primary-400') 100%);
+
+    &:is(:active, :focus, :focus-visible, :focus-within, :disabled) {
+        background-image: none;
+    }
+
+    &:is(:focus, :focus-visible, :focus-within) {
+        background-color: map-get($theme-colors, 'primary-500');
+        box-shadow: $box-shadow;
+    }
+}
+
+.btn-outline-irun {
+    @include button-outline-variant($color: map-get($theme-colors, 'secondary-500'),
+        $color-hover: $white,
+        $active-background: map-get($theme-colors, 'primary-400'),
+        $active-border: map-get($theme-colors, 'primary-400'),
+        $active-color: $white);
+
+    border-color: map-get($theme-colors, 'secondary-300');
+
+    &:is(:focus, :focus-visible, :focus-within) {
+        border-color: map-get($theme-colors, 'primary-400');
+        box-shadow: $box-shadow;
+    }
+
+    &:is(:disabled) {
+        color: map-get($theme-colors, 'secondary-200');
+        border-color: map-get($theme-colors, 'secondary-200');
+    }
+}
+
+.btn-text-irun {
+    @include button-variant($background: transparent,
+        $border: transparent,
+        $color: map-get($theme-colors, 'secondary-300'),
+        $hover-background: transparent,
+        $hover-border: transparent,
+        $hover-color: map-get($theme-colors, 'secondary-300'),
+        $active-background: transparent,
+        $active-border: transparent,
+        $active-color: map-get($theme-colors, 'secondary-500'),
+        $disabled-background: transparent,
+        $disabled-border: transparent,
+        $disabled-color: map-get($theme-colors, 'secondary-200'));
+
+    &:is(:focus, :focus-visible, :focus-within) {
+        color: map-get($theme-colors, 'secondary-500');
+        box-shadow: none;
+    }
+}
+
+.btn-input-irun {
+    @include button-variant($background: transparent,
+        $border: map-get($theme-colors, 'secondary-300'),
+        $color: map-get($theme-colors, 'secondary-300'),
+        $hover-background: transparent,
+        $hover-border: map-get($theme-colors, 'secondary-300'),
+        $hover-color: map-get($theme-colors, 'secondary-300'),
+        $active-background: map-get($theme-colors, 'primary-400'),
+        $active-border: map-get($theme-colors, 'primary-400'),
+        $active-color: $white,
+        $disabled-background: transparent,
+        $disabled-border: map-get($theme-colors, 'secondary-200'),
+        $disabled-color: map-get($theme-colors, 'secondary-200'));
+
+    &:is(:focus, :focus-visible, :focus-within) {
+        color: $white;
+        background-color: map-get($theme-colors, 'primary-400');
+        border-color: map-get($theme-colors, 'primary-400');
+        box-shadow: $box-shadow;
+    }
+}
+
+.btn-tab-irun {
+    @include button-variant($background: transparent,
+        $border: map-get($theme-colors, 'secondary-300'),
+        $color: map-get($theme-colors, 'secondary-800'),
+        $hover-background: transparent,
+        $hover-border: map-get($theme-colors, 'secondary-300'),
+        $hover-color: map-get($theme-colors, 'secondary-800'),
+        $active-background: map-get($theme-colors, 'primary-400'),
+        $active-border: map-get($theme-colors, 'primary-400'),
+        $active-color: $white,
+        $disabled-background: map-get($theme-colors, 'secondary-200'),
+        $disabled-border: map-get($theme-colors, 'secondary-200'),
+        $disabled-color: $white);
+
+    &:is(:focus, :focus-visible, :focus-within) {
+        color: $white;
+        background-color: map-get($theme-colors, 'primary-400');
+        border-color: map-get($theme-colors, 'primary-400');
+        box-shadow: $box-shadow;
+    }
+
+    &--white {
+        @include button-variant($background: rgba($white, 0.2),
+            $border: rgba($white, 0.2),
+            $color: $white,
+            $hover-background: rgba($white, 0.2),
+            $hover-border: rgba($white, 0.2),
+            $hover-color: $white,
+            $active-background: $white,
+            $active-border: $white,
+            $active-color: map-get($theme-colors, 'primary-500'),
+            $disabled-background: rgba($white, 0.2),
+            $disabled-border: rgba($white, 0.2),
+            $disabled-color: $white);
+
+        &:is(:focus, :focus-visible, :focus-within) {
+            color: map-get($theme-colors, 'primary-500');
+            background-color: $white;
+            border-color: $white;
+            box-shadow: $box-shadow;
+        }
+    }
+}
+
+.btn-icon-irun {
+    @include button-variant($background: $white,
+        $border: $white,
+        $color: map-get($theme-colors, 'secondary-500'),
+        $hover-background: $white,
+        $hover-border: $white,
+        $hover-color: map-get($theme-colors, 'secondary-500'),
+        $active-background: map-get($theme-colors, 'primary-50'),
+        $active-border: map-get($theme-colors, 'primary-50'),
+        $active-color: map-get($theme-colors, 'primary-500'),
+        $disabled-background: map-get($theme-colors, 'secondary-200'),
+        $disabled-border: map-get($theme-colors, 'secondary-200'),
+        $disabled-color: $white);
+
+    &:is(:focus, :focus-visible, :focus-within) {
+        color: map-get($theme-colors, 'primary-500');
+        background-color: map-get($theme-colors, 'primary-50');
+        border-color: map-get($theme-colors, 'primary-50');
+        box-shadow: $box-shadow;
+    }
+
+    >svg {
+        fill: currentColor;
+    }
+}
+
+.btn-icon-outline-irun {
+    @include button-variant($background: $white,
+        $border: map-get($theme-colors, 'secondary-300'),
+        $color: map-get($theme-colors, 'secondary-500'),
+        $hover-background: $white,
+        $hover-border: map-get($theme-colors, 'secondary-300'),
+        $hover-color: map-get($theme-colors, 'secondary-500'),
+        $active-background: map-get($theme-colors, 'primary-400'),
+        $active-border: map-get($theme-colors, 'primary-400'),
+        $active-color: $white,
+        $disabled-background: $white,
+        $disabled-border: map-get($theme-colors, 'secondary-200'),
+        $disabled-color: map-get($theme-colors, 'secondary-200'));
+
+    &:is(:focus, :focus-visible, :focus-within) {
+        color: $white;
+        background-color: map-get($theme-colors, 'primary-400');
+        border-color: map-get($theme-colors, 'primary-400');
+        box-shadow: $box-shadow;
+    }
+
+    >svg {
+        fill: currentColor;
+    }
+}
