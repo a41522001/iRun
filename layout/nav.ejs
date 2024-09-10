@@ -1,0 +1,52 @@
+<ul
+  class="position-fixed fixed-bottom nav nav-pills px-8 justify-content-between bg-white"
+>
+  <li class="nav-item">
+    <a
+      class="nav-link text-secondary-300 fw-bold text-center"
+      href="index.html"
+    >
+      <div class="p-2 rounded-circle bg-secondary-300 mb-1">
+        <img src="../assets/images/icons/sport.svg" alt="運動" />
+      </div>
+      運動
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-secondary-300 fw-bold text-center" href="team.html">
+      <div class="p-2 rounded-circle bg-secondary-300 mb-1">
+        <img src="../assets/images/icons/team.svg" alt="隊伍" />
+      </div>
+      隊伍
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link text-secondary-300 fw-bold text-center"
+      href="setting.html"
+    >
+      <div class="p-2 rounded-circle bg-secondary-300 mb-1">
+        <img src="../assets/images/icons/setting.svg" alt="設定" />
+      </div>
+      設定
+    </a>
+  </li>
+</ul>
+<script>
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach((navLink) => {
+    if (currentPath.includes(navLink.getAttribute("href").split(".")[0])) {
+      navLink.classList.add("text-warning-100");
+      navLink.classList.remove("text-secondary-300");
+      navLink.firstElementChild.classList.add("bg-warning-100");
+      navLink.firstElementChild.classList.remove("bg-secondary-300");
+    } else {
+      navLink.classList.add("text-secondary-300");
+      navLink.classList.remove("text-warning-100");
+      navLink.firstElementChild.classList.add("bg-secondary-300");
+      navLink.firstElementChild.classList.remove("bg-warning-100");
+    }
+  });
+</script>
