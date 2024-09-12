@@ -1,0 +1,11 @@
+.setting {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #31CADF, #13CCE9, #00B4DD);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 0;
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}

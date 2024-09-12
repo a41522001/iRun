@@ -1,0 +1,54 @@
+.sport {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #31CADF, #13CCE9, #00B4DD);
+  display: flex;
+  flex-direction: column;
+  .px-custom {
+    padding: 0 6px;
+  }
+  .py-custom {
+    padding: 6px 0;
+  }
+  .avatar-md {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .list-line {
+    padding: 0 1.5rem;
+  }
+  .dropdown-toggle {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown-menu {
+    width: 160px;
+  }
+  .dropdown-item.active, .dropdown-item:active {
+    background-color: #EDFDFE;
+    color: #15ADC5;
+  }
+  .chart-bar {
+    width: 33.14px;
+    background-color: #66DFED;
+    border-radius: 9px;
+  }
+  .small-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #66DFED;
+    margin-bottom: 2px;
+  }
+}
+@media (max-width: 350px) {
+  .sport {
+    .list-line {
+      padding: 0 1rem;
+    }
+  }
+  
+}
