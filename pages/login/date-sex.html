@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iRun - login</title>
+  </head>
+  <body>
+    <%- include('./layout/login/date-sex'); -%>
+    <script type="module" src="../../main.js"></script>
+    <script>
+      const timeline = [
+  { 1: true },
+  { 2: true },
+  { 3: true },
+  { 4: false },
+  { 5: false },
+  { 6: false },
+  { 7: false }
+]
+const createTimeline = () => {
+  const timelineList = document.querySelector('.timeline-list');
+  timeline.forEach((item, index) => {
+    const li = document.createElement('li');
+    const circle = document.createElement('div');
+    li.classList.add('timeline-item');
+    circle.classList.add('timeline-circle');
+    if(item[index+1]) {
+      circle.classList.add('timeline-circle-active');
+    }else {
+      circle.classList.add('timeline-circle-original');
+    }
+    circle.textContent = index + 1;
+    timelineList.appendChild(li);
+    li.appendChild(circle);
+  })
+}
+
+addEventListener('DOMContentLoaded', () => {
+  createTimeline();
+})
+    </script>
+  </body>
+</html>
