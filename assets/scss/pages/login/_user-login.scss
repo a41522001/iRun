@@ -72,3 +72,13 @@ img {
     width: 141px;
     height: 170px;
 }
+
+.sex-icon {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+    &.active {
+        color: $white;
+    }
+}

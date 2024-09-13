@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iRun - login</title>
+    <link  href="/path/to/picker.css" rel="stylesheet">
   </head>
   <body>
     <%- include('./layout/login/remind'); -%>
     <script type="module" src="../../main.js"></script>
+    <script src="/path/to/picker.js"></script>
     <script>
       const timeline = [
   { 1: true },
@@ -40,6 +42,13 @@ const createTimeline = () => {
 addEventListener('DOMContentLoaded', () => {
   createTimeline();
 })
+new Picker(document.querySelector('.js-time-picker'), {
+  format: 'HH:mm',
+  headers: true,
+  text: {
+    title: 'Pick a time',
+  },
+});
     </script>
   </body>
 </html>
