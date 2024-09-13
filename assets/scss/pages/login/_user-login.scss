@@ -37,10 +37,33 @@ img {
     height: 56px;
 }
 
+.login-label-color {
+    color: #BDBDBD;
+
+    &.active {
+        color: $white;
+    }
+}
+
 .login-text {
     color: #464646;
 
     &.active {
         color: $white;
+    }
+}
+
+.login-col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.login-checkbox {
+    font-weight: 400;
+    color: #464646;
+
+    &.active {
+        color: $white;
+        font-weight: 700;
     }
 }
