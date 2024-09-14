@@ -6,6 +6,11 @@
     &::after {
       background-image: none;
     }
+
+    &__body::before,
+    &__body::after {
+      background-image: none;
+    }
   }
   
   .picker-dialog {
@@ -45,13 +50,17 @@
 
   .picker-item {
     width: 120px;
+    line-height: $line-height-base;
     color: map-get($map: $theme-colors, $key: "secondary-300");
     font-weight: normal;
+    font-size: map-get($map: $font-sizes, $key: 5);
 
     &.picker-picked {
       background-color: map-get($map: $theme-colors, $key: "primary-50");
       color: map-get($map: $theme-colors, $key: "primary-500");
       font-weight: bold;
+      font-size: map-get($map: $font-sizes, $key: 4);
+      border-radius: 12px;
     }
   }
 }
