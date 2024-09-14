@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>i run</title>
-  <style>
-
-  </style>
 </head>
 <body>
   <div class="sport">
@@ -34,7 +31,7 @@
           <p class="mb-0 fs-3">3000<span class="ms-2 fs-7">卡</span></p>
         </li>
       </ul>
-      <button class="btn bg-white text-primary-500 fs-4 rounded-pill fw-bold w-100 py-6">開始運動</button>
+      <a href="../teaching/" class="btn bg-white text-primary-500 fs-4 rounded-pill fw-bold w-100 py-6">開始運動！</a>
     </div>
 
     <div class="bg-white rounded-top-3 px-4 pt-7 flex-grow-1">
@@ -71,7 +68,7 @@
           <li>六</li>
           <li>七</li>
         </ul>
-        <ul class="list-unstyled d-flex align-items-end justify-content-between mb-2">
+        <ul class="chart-bar-list list-unstyled d-flex align-items-end justify-content-between mb-2 position-relative">
           <li class="d-flex flex-column align-items-center">
             <span class="mb-2 text-secondary-800 fs-8 fw-bold">60</span>
             <div class="chart-bar" style="height: 84px;"></div>
@@ -100,15 +97,16 @@
             <span class="mb-2 text-secondary-800 fs-8 fw-bold">20</span>
             <div class="chart-bar" style="height: 43px;"></div>
           </li>
+          <div class="bar-line"></div>
         </ul>
         <div class="d-flex align-items-center">
           <div class="small-circle"></div>
           <p class="mb-0 fs-8 text-secondary-800 ms-2">運動時間（分）</p>
         </div>
       </div>
-    </div>
+    </div>  
+    <%- include('./layout/nav.ejs', {currentPage: 'sport'}); -%>
   </div>
-  <%- include('./layout/nav.ejs', {currentPage: 'sport'}); -%>
   <script type="module" src="../../../main.js"></script>
   <script>
 
