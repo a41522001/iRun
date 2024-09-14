@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+</head>
+<body>
+  <div class="min-vh-100 d-flex flex-column px-4">
+    <div class="d-grid justify-content-center align-content-center flex-grow-1">
+      <h1 class="fs-3 fw-bold lh-base text-center text-primary-500">你尚未加入任何隊伍</h1>
+      <img src="/assets/images/banner-irun.png" alt="隊伍畫面" class="img-fluid my-8">
+      <a href="./create/" class="btn btn-irun mb-4 rounded-pill fw-bold">創建隊伍</a>
+      <a class="btn btn-outline-irun rounded-pill fw-bold">加入隊伍</a>
+    </div>
+    <div><%- include('./layout/nav.ejs'); -%></div>
+  </div>
+  <script type="module" src="../../main.js"></script>
+</body>
+</html>
