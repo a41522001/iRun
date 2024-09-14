@@ -1,0 +1,57 @@
+.time-picker-wrapper {
+  .picker-cell {
+    border: none;
+    
+    &::before,
+    &::after {
+      background-image: none;
+    }
+  }
+  
+  .picker-dialog {
+    position: relative;
+    border: none;
+
+    &::after {
+      content: "：";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-weight: bold;
+      font-size: map-get($map: $font-sizes, $key: 4);
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .picker-list {
+    display: grid;
+  }
+
+  .picker-cell {
+    .picker-list {
+      justify-content: flex-end;
+      padding-inline-end: 14px;
+    }
+
+    + .picker-cell {
+      border-left: none;
+
+      .picker-list {
+        justify-content: flex-start;
+        padding-inline-start: 14px;
+      }
+    }
+  }
+
+  .picker-item {
+    width: 120px;
+    color: map-get($map: $theme-colors, $key: "secondary-300");
+    font-weight: normal;
+
+    &.picker-picked {
+      background-color: map-get($map: $theme-colors, $key: "primary-50");
+      color: map-get($map: $theme-colors, $key: "primary-500");
+      font-weight: bold;
+    }
+  }
+}
