@@ -1,0 +1,42 @@
+<div class="time-picker-wrapper">
+  <div class="js-inline-picker"></div>
+  <input type="text" id="timer" class="d-none">
+</div>
+<script type="module">
+  import Picker from 'pickerjs';
+
+  const timerInput = document.getElementById('timer'); 
+  const timePicker = new Picker(document.querySelector('.js-inline-picker'), {
+    container: '.time-picker-wrapper',
+    controls: false,
+    format: 'mm:ss',
+    inline: true,
+  });
+  const pickerMinutes = document.querySelector('.picker-minutes');
+  const pickerSeconds = document.querySelector('.picker-seconds');
+  const pickedMinute = pickerMinutes.querySelector('.picker-picked');
+  const pickedSecond = pickerSeconds.querySelector('.picker-picked');
+  
+  let minutes = pickedMinute.dataset.value.padStart(2, '0');
+  let seconds = pickedSecond.dataset.value.padStart(2, '0');
+
+  timerInput.value = `${minutes}:${seconds}`;
+
+  pickerMinutes.addEventListener('touchend', (event) => {
+    const pickedMinute = pickerMinutes.querySelector('.picker-picked')
+    minutes = pickedMinute.dataset.value.padStart(2, '0');
+    
+    timerInput.value = `${minutes}:${seconds}`;
+  });
+
+  pickerSeconds.addEventListener('touchend', (event) => {
+    const pickedSecond = pickerSeconds.querySelector('.picker-picked')
+    seconds = pickedSecond.dataset.value.padStart(2, '0');
+
+    timerInput.value = `${minutes}:${seconds}`;
+  });
+  
+  window.addEventListener('beforeunload', () => {
+    timePicker.destroy();
+  });
+</script>
