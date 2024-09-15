@@ -1,0 +1,57 @@
+.start {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: 
+    url("../../assets/images/bg-area.png") 
+    no-repeat 
+    left top / 100% 100%;
+    position: relative;
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(41, 41, 41, .7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } 
+  .counter {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #EDFDFE;
+  }
+  .count {
+    color: #EDFDFE;
+    font-size: 96px;
+    font-weight: 700;
+    animation: countAnimation 1s linear;
+  }
+  .aicoach-img {
+    width: 227px;
+    height: 273px;
+    margin-bottom: 1rem;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}
+@keyframes countAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}

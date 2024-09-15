@@ -4,10 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>i run</title>
+    <style>
+      .home {
+        width: 100%;
+        height: 100vh;       
+      }
+      .home-entry {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        padding: 0 1rem;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
-    <%- include('./layout/nav.ejs', {currentPage: 'sport'}); -%>
+    <div class="home bg-primary-400">
+      <div class="h-100 d-flex flex-column align-items-center justify-content-center">
+        <img src="../assets/images/logo.png" alt="logo">
+        <h1 class="fs-1 text-white fw-bold lh-lg">iRun</h1>
+      </div>
+    </div>
+    <div class="home-entry">
+      <div>
+        <h2 class="text-primary-500 fw-bold fs-3 text-center mb-8">AI教練來陪你運動</h2>
+        <img class="d-block mx-auto mb-8" src="../assets/images/banner-irun.png" alt="banner">
+        <div class="d-flex flex-column">
+          <a href="#" class="btn btn-outline-irun rounded-pill fs-6 py-6 w-100 mb-4">立即開始</a>
+          <a href="#" class="btn btn-outline-irun rounded-pill fs-6 py-6 w-100">會員登入</a>
+        </div>
+      </div>
+    </div>
+    <!-- <%- include('./layout/nav.ejs', {currentPage: 'sport'}); -%> -->
     <script type="module" src="../main.js"></script>
+    <script>
+      setTimeout(() => {
+        const home = document.querySelector('.home');
+        const homeEntry = document.querySelector('.home-entry');
+        home.style.display = 'none';
+        homeEntry.style.display = 'flex';
+      }, 2000);
+    </script>
   </body>
 </html>
