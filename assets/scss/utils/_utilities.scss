@@ -30,6 +30,7 @@ $utilities: map-merge(( // scss-docs-start utils-vertical-align
     // scss-docs-start utils-opacity
     "opacity": (property: opacity,
       values: (0: 0,
+        20: .2,
         25: .25,
         50: .5,
         75: .75,
@@ -459,6 +460,7 @@ $utilities: map-merge(( // scss-docs-start utils-vertical-align
     "bg-opacity": (css-var: true,
       class: bg-opacity,
       values: (10: .1,
+        20: .2,
         25: .25,
         50: .5,
         75: .75,
