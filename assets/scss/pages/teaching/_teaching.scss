@@ -4,15 +4,19 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
+
   .timeline-list {
     justify-content: space-between;
   }
+
   .timeline-circle-original::before {
     width: 63px;
   }
+
   .timeline-item:not(:first-child) .timeline-circle-active::before {
     width: 63px;
   }
+
   .cursor-pointer {
     cursor: pointer;
   }

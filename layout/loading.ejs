@@ -1,0 +1,23 @@
+<style>
+  .loading {
+    background: rgba(41, 41, 41, 0.7);
+    display: flex;
+  }
+</style>
+<div class="loading z-3 fixed-top w-100 vh-100 align-items-center justify-content-center flex-column">
+  <div class="loaders">
+    <div class="loader">
+      <div class="ball-pulse-sync">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <div class="text-white fw-bold fs-4 mt-7">Loading</div>
+</div>
+<script>
+  setTimeout(() => {
+    document.querySelector('.loading').style.display = 'none';
+  }, 2500)
+</script>
