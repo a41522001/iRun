@@ -14,6 +14,7 @@
     background-image: linear-gradient(90deg,
             #53e4f4 0%,
             map-get($theme-colors, 'primary-400') 100%);
+    font-weight: bold;
 
     &:is(:active, :focus, :focus-visible, :focus-within, :disabled) {
         background-image: none;
@@ -33,6 +34,7 @@
         $active-color: $white);
 
     border-color: map-get($theme-colors, 'secondary-300');
+    font-weight: bold;
 
     &:is(:focus, :focus-visible, :focus-within) {
         border-color: map-get($theme-colors, 'primary-400');
@@ -59,6 +61,8 @@
         $disabled-border: transparent,
         $disabled-color: map-get($theme-colors, 'secondary-200'));
 
+    font-weight: bold;
+
     &:is(:focus, :focus-visible, :focus-within) {
         color: map-get($theme-colors, 'secondary-500');
         box-shadow: none;
@@ -78,6 +82,8 @@
         $disabled-background: transparent,
         $disabled-border: map-get($theme-colors, 'secondary-200'),
         $disabled-color: map-get($theme-colors, 'secondary-200'));
+
+    font-weight: bold;
 
     &:is(:focus, :focus-visible, :focus-within) {
         color: $white;
@@ -101,6 +107,8 @@
         $disabled-border: map-get($theme-colors, 'secondary-200'),
         $disabled-color: $white);
 
+    font-weight: bold;
+
     &:is(:focus, :focus-visible, :focus-within) {
         color: $white;
         background-color: map-get($theme-colors, 'primary-400');
@@ -121,6 +129,8 @@
             $disabled-background: rgba($white, 0.2),
             $disabled-border: rgba($white, 0.2),
             $disabled-color: $white);
+
+        font-weight: bold;
 
         &:is(:focus, :focus-visible, :focus-within) {
             color: map-get($theme-colors, 'primary-500');
@@ -144,6 +154,8 @@
         $disabled-background: map-get($theme-colors, 'secondary-200'),
         $disabled-border: map-get($theme-colors, 'secondary-200'),
         $disabled-color: $white);
+
+    font-weight: bold;
 
     &:is(:focus, :focus-visible, :focus-within) {
         color: map-get($theme-colors, 'primary-500');
@@ -170,6 +182,8 @@
         $disabled-background: $white,
         $disabled-border: map-get($theme-colors, 'secondary-200'),
         $disabled-color: map-get($theme-colors, 'secondary-200'));
+
+    font-weight: bold;
 
     &:is(:focus, :focus-visible, :focus-within) {
         color: $white;

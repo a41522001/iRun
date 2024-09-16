@@ -21,12 +21,19 @@ const createTimeline = () => {
   timeline.forEach((item, index) => {
     const li = document.createElement('li');
     const circle = document.createElement('div');
+    const line = document.createElement('span');
     li.classList.add('timeline-item');
     circle.classList.add('timeline-circle');
+    line.classList.add('timeline-line');
     if(item[index+1]) {
       circle.classList.add('timeline-circle-active');
+      line.classList.add('timeline-line-active');
     }else {
       circle.classList.add('timeline-circle-original');
+      line.classList.add('timeline-line-original');
+    }
+    if(index !== 0) {
+      li.appendChild(line);
     }
     circle.textContent = index + 1;
     timelineList.appendChild(li);
