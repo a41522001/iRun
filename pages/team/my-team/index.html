@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+</head>
+<body>
+  <div class="d-flex flex-column vh-100 team">
+    <div class="flex-grow-1 p-4 overflow-y-auto position-relative team-wrapper">
+      <button type="button" class="btn p-0 pe-4 position-absolute end-0 border-0" data-bs-toggle="modal" data-bs-target="#leave-modal">
+        <img src="/assets/images/icons/leave.svg" alt="離開隊伍" width="34" height="34">
+      </button>
+      <h2 class="fs-3 text-white fw-bold lh-base text-center mb-4">我的隊伍</h2>
+      <%- include('./layout/card-my-team.ejs', {
+        myTeam: {
+          id: '123456',
+          name: '我的超慢跑隊伍',
+          intro: '每周固定3天超慢跑，大家一起減脂減肥、完成任務吧～～',
+          member: 2,
+          cover: '/assets/images/team-cover-2.png',
+          goal: {
+            steps: 150,
+            frequency: 5
+          },
+          finished: 0
+        }
+      }) %>
+      <h2 class="fs-3 text-white fw-bold lh-base text-center mb-4">隊友列表</h2>
+      <ul class="d-flex flex-column row-gap-4 list-unstyled container">
+        <li class="row">
+          <%- include("./layout/card-teammate.ejs", {
+            teammate: {
+              id: 1,
+              avatar: "/assets/images/coach-1.png",
+              name: "Gina",
+              finished: 0,
+              isFirst: true
+            }
+          }) %>
+        </li>
+      </ul>
+    </div>
+    <%- include('./layout/nav.ejs') %>
+    <div class="modal fade" id="leave-modal" tabindex="-1" aria-labelledby="確定離開隊伍 ?" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-7">
+            <h2 class="fs-4 fw-bold text-warning-300 lh-base mb-6">確定離開隊伍 ?</h2>
+            <div class="d-flex column-gap-4">
+              <button type="button" class="btn btn-outline-irun text-secondary-300 flex-grow-1 rounded-pill fw-regular" data-bs-dismiss="modal">否</button>
+              <a href="../../team/" class="btn btn-warning-300 flex-grow-1 rounded-pill text-white fw-bold">是</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="notification-modal" tabindex="-1" aria-labelledby="創建隊伍成功與否" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body d-flex flex-column align-items-center p-7">
+            <h2 class="fs-4 fw-bold text-primary-700 lh-base">成功創建隊伍</h2>
+            <img src="/assets/images/aicoach.png" height="200" alt="" class="mb-7">
+            <button type="button" class="btn btn-irun align-self-stretch rounded-pill fw-bold" data-bs-dismiss="modal">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../../../main.js"></script>
+  <script type="module">
+    import Modal from 'bootstrap/js/dist/modal';
+
+    const notificationModal = new Modal('#notification-modal');
+    
+    window.addEventListener('DOMContentLoaded', () => {
+      notificationModal.show();
+    });
+  </script>
+</body>
+</html>

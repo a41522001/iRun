@@ -1,0 +1,41 @@
+<section class="container mb-8">
+  <div class="row">
+    <div class="card p-7 rounded-3 border-0 bg-white card-my-team">
+      <div class="d-flex column-gap-4">
+        <div class="flex-shrink-0">
+          <img src="<%= myTeam.cover %>" class="img-fluid mb-2" width="80" height="80" alt="<%= myTeam.name %>">
+          <div class="fw-regular fs-8 text-center team-card-icon">
+            <img src="/assets/images/icons/member.svg" width="18" height="18" alt="人數">
+            <%= myTeam.member %>/5
+          </div>
+        </div>
+        <div class="card-body p-0 d-flex flex-column align-items-end">
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h3 class="card-title fs-6 fw-bold lh-base text-primary-800 mb-0"><%= myTeam.name %></h3>
+              <span class="fs-8 fw-regular lh-1">ID<span class="d-inline-block ms-1"><%= myTeam.id %></span></span>
+            </div>
+            <p class="card-text fs-8 fw-regular"><%= myTeam.intro %></p>
+          </div>
+          <button class="btn btn-irun rounded-pill py-1 px-4 mt-auto fw-bold fs-8">邀請好友</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="card p-7 rounded-3">
+      <div class="card-body p-0">
+        <h3 class="card-title fs-6 fw-bold lh-base text-secondary-800 mb-4">每周任務
+          <span class="text-primary-800 d-inline-block ms-2"><%= myTeam.goal.steps %>步頻 每周<%= myTeam.goal.frequency %>次</span>
+        </h3>
+        <div class="d-flex column-gap-4">
+          <img src="/assets/images/9359ab6fcd36b1c5.png" width="80" height="80" alt="goal">
+          <div class="flex-grow-1 text-center">
+            <p class="card-text fs-6 fw-bold mb-2">本周已完成 <span><%= myTeam.finished %></span> %</p>
+            <a href="../../start/" class="w-100 btn btn-irun rounded-pill fw-bold fs-6 py-4">開始跑步</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
