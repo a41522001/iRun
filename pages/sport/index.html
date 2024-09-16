@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>i run</title>
-  <style>
-
-  </style>
 </head>
 <body>
   <div class="sport">
+    <%- include('./layout/loading.ejs'); -%>
     <div class="container px-4 pt-4 pb-7 text-white fw-bold">
       <div class="mb-6 d-flex justify-content-between align-items-center">
         <div class="">
@@ -20,15 +18,17 @@
           <img class="img-fluid object-fit-cover" src="../../assets/images/avatar1.png" alt="avatar">
         </div>
       </div>
-      <ul class="list-unstyled mb-8 d-flex justify-content-between align-items-center">
-        <li class="py-custom">
+      <ul class="list-unstyled mb-8 d-flex align-items-center">
+        <li class="py-custom flex-grow-1">
           <p class="mb-1 fs-8">步數</p>
           <p class="mb-0 fs-3">425<span class="ms-2 fs-7">步</span></p>
         </li>
-        <li class="list-line py-custom border-end border-start">
+        <li class="flex-grow-1 align-self-stretch"><span class="list-line"></span></li>
+        <li class="py-custom flex-grow-1">
           <p class="mb-1 fs-8">距離</p>
           <p class="mb-0 fs-3">1.54<span class="ms-2 fs-7">公里</span></p>
         </li>
+        <li class="flex-grow-1 align-self-stretch"><span class="list-line"></span></li>
         <li class="py-custom">
           <p class="mb-1 fs-8">消耗熱量</p>
           <p class="mb-0 fs-3">3000<span class="ms-2 fs-7">卡</span></p>

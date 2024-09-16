@@ -5,9 +5,14 @@
   padding: 0;
   list-style: none;
   margin-bottom: 1rem;
+  width: 100%;
 }
-.timeline-item:nth-child(n+2) {
-  margin-left: 33.83px;
+.timeline-item {
+  display: flex;
+  align-items: center;
+}
+.timeline-item:not(:first-child) {
+  flex-grow: 1;
 }
 .timeline-circle {
   position: relative;
@@ -19,7 +24,7 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  padding-top: 3px;
+  padding-top: 2px;
 }
 .timeline-circle-original {
   background-color: #fff;
@@ -31,23 +36,14 @@
   color: #fff;
   border: 2px solid #66DFED;
 }
-.timeline-circle-original::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
-  width: 36px;
+.timeline-line {
   height: 2px;
+  flex-grow: 1;
+  display: inline-block;
+}
+.timeline-line-original {
   background-color: #bdbdbd;
 }
-.timeline-item:not(:first-child) .timeline-circle-active::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
-  width: 36px;
-  height: 2px;
+.timeline-line-active {
   background-color: #66DFED;
 }
