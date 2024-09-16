@@ -1,0 +1,46 @@
+<div class="card p-7 rounded-3 border-0 bg-white card-my-team">
+  <div class="d-flex column-gap-4">
+    <div class="flex-shrink-0">
+      <img src="<%= team.cover %>" class="img-fluid mb-2" width="80" height="80" alt="<%= team.name %>">
+      <div class="fw-regular fs-8 text-center team-card-icon">
+        <img src="/assets/images/icons/member.svg" width="18" height="18" alt="人數">
+        <%= team.member %>/5
+      </div>
+    </div>
+    <div class="card-body p-0 d-flex flex-column justify-content-between">
+      <div>
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <h3 class="card-title fs-6 fw-bold lh-base text-primary-800 mb-0"><%= team.name %></h3>
+          <span class="fs-8 fw-regular lh-1">ID<span class="d-inline-block ms-1"><%= team.id %></span></span>
+        </div>
+        <p class="card-text fs-8 fw-regular"><%= team.intro %></p>
+      </div>
+      <div class="d-flex align-items-center fs-8 justify-content-between fw-regular">
+        <span><span class="me-2 fw-bold">目標</span><span><%= team.goal.steps %>步頻</span> <span>每周<%= team.goal.frequency %>次</span></span>
+        <button type="button" class="btn btn-irun rounded-pill fs-8 py-1 px-4" data-bs-toggle="modal" data-bs-target="#join-<%= team.id %>-modal">加入</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="join-<%= team.id %>-modal" tabindex="-1" aria-labelledby="確定加入" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered mx-1">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center p-7">
+        <h2 class="fs-4 fw-bold text-primary-700 lh-base">確定加入</h2>
+        <img src="<%= team.cover %>" width="80" height="80" alt="<%= team.name %>" class="mb-3">
+        <h3 class="fs-6 fw-bold text-primary-700 lh-base mb-7"><%= team.name %></h3>
+        <a class="modal-link w-100"><button type="button" class="btn btn-irun align-self-stretch rounded-pill fw-bold w-100" data-bs-dismiss="modal">確認</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module">
+  import { currentBase } from '/main.js';
+  const id = "<%= team.id %>";
+  
+  const modalLink = document.querySelector(`#join-${id}-modal .modal-link`);
+  modalLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = `${currentBase}team/my-team/joined.html`;
+  })
+</script>
