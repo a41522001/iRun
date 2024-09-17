@@ -2,7 +2,7 @@
   <div class="d-flex column-gap-4">
     <div class="flex-shrink-0">
       <img src="<%= team.cover %>" class="img-fluid mb-2" width="80" height="80" alt="<%= team.name %>">
-      <div class="fw-regular fs-8 text-center team-card-icon">
+      <div class="fw-regular fs-8 text-center team-card-icon text-secondary-800">
         <img src="/assets/images/icons/member.svg" width="18" height="18" alt="人數">
         <%= team.member %>/5
       </div>
@@ -11,11 +11,11 @@
       <div>
         <div class="d-flex justify-content-between align-items-center mb-1">
           <h3 class="card-title fs-6 fw-bold lh-base text-primary-800 mb-0"><%= team.name %></h3>
-          <span class="fs-8 fw-regular lh-1">ID<span class="d-inline-block ms-1"><%= team.id %></span></span>
+          <span class="fs-8 fw-regular lh-1 text-secondary-800">ID<span class="d-inline-block ms-1"><%= team.id %></span></span>
         </div>
-        <p class="card-text fs-8 fw-regular"><%= team.intro %></p>
+        <p class="card-text fs-8 fw-regular text-secondary-800"><%= team.intro %></p>
       </div>
-      <div class="d-flex align-items-center fs-8 justify-content-between fw-regular">
+      <div class="d-flex align-items-center fs-8 justify-content-between fw-regular text-secondary-800">
         <span><span class="me-2 fw-bold">目標</span><span><%= team.goal.steps %>步頻</span> <span>每周<%= team.goal.frequency %>次</span></span>
         <button type="button" class="btn btn-irun rounded-pill fs-8 py-1 px-4" data-bs-toggle="modal" data-bs-target="#join-<%= team.id %>-modal">加入</button>
       </div>
