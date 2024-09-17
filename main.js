@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'pickerjs/dist/picker.css';
 import 'loaders.css/loaders.min.css';
 
-const currentBase = '/iRun/pages/';
+export const currentBase = '/iRun/pages/';
 
 const currentRoot = window.location.pathname.replace(currentBase, '').split('/')[0];
 
