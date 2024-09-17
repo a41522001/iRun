@@ -29,13 +29,18 @@
   }
   .dropdown-menu {
     min-width: 140px;
-    li{
-      .dropdown-item {
-        width: auto;
-      }
-    }
   }
   .dropdown-item.active, .dropdown-item:active {
+    background-color: #EDFDFE;
+    color: #15ADC5;
+  }
+  .dropdown-item {
+    width: auto;
+    color: #464646;
+  }
+  .dropdown-item:active,
+  .dropdown-item:focus,
+  .dropdown-item:hover {
     background-color: #EDFDFE;
     color: #15ADC5;
   }
