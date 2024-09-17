@@ -1,7 +1,7 @@
 .time-picker-wrapper {
   .picker-cell {
     border: none;
-    
+
     &::before,
     &::after {
       background-image: none;
@@ -12,7 +12,7 @@
       background-image: none;
     }
   }
-  
+
   .picker-dialog {
     position: relative;
     border: none;
@@ -38,7 +38,7 @@
       padding-inline-end: 14px;
     }
 
-    + .picker-cell {
+    +.picker-cell {
       border-left: none;
 
       .picker-list {

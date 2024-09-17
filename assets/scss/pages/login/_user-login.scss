@@ -1,0 +1,87 @@
+.hr-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    & .user-text::before,
+    & .user-text::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        top: 50%;
+        width: 100px;
+        background-color: #bdbdbd;
+    }
+
+    & .user-text::before {
+        left: 10px;
+    }
+
+    & .user-text::after {
+        right: 10px;
+    }
+}
+
+.login-btn-fb {
+    background-color: #5370BB;
+}
+
+.login-btn-goo {
+    background-color: #DF685D;
+}
+
+.login-label-color {
+    color: #BDBDBD;
+
+    &.active {
+        color: $white;
+    }
+}
+
+
+.login-text {
+    color: #464646;
+    font-weight: 400;
+
+    &.active {
+        color: $white;
+    }
+
+}
+
+.login-toggle[type="radio"]:checked+.login-text {
+    font-weight: 700;
+}
+
+
+
+.login-col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.login-checkbox[type="checkbox"]:checked+.login-text {
+    font-weight: 700;
+    background-color: #15ADC5;
+}
+
+.login-coach {
+    width: 141px;
+    height: 170px;
+}
+
+.sex-icon {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+    &.active {
+        color: $white;
+    }
+}
+
+.ring {
+    width: 160px;
+    height: 160px;
+}
