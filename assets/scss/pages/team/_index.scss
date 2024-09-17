@@ -101,4 +101,14 @@
     width: 46px;
     height: 46px;
   }
+
+  .scrollbar-none {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @supports (scrollbar-width: none) {
+      scrollbar-width: none;
+    }
+  }
 }
