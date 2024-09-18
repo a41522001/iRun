@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>i run</title>
+    <style>
+      .home {
+        width: 100%;
+        height: 100vh;       
+      }
+      .home-entry {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        padding: 0 1rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+    </style>
+    <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+    <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+  </head>
+  <body>
+    <div class="home bg-primary-400">
+      <div class="h-100 d-flex flex-column align-items-center justify-content-center">
+        <img src="/iRun/assets/logo-db651839.png" alt="logo">
+        <h1 class="fs-1 text-white fw-bold lh-lg">iRun</h1>
+      </div>
+    </div>
+    <div class="home-entry">
+      <div>
+        <h2 class="text-primary-500 fw-bold fs-3 text-center mb-8">AI教練來陪你運動</h2>
+        <img class="d-block mx-auto mb-8" src="/iRun/assets/banner-irun-4c001f6b.png" alt="banner">
+        <div class="d-flex flex-column">
+          <a href="./login/nickname.html" class="btn btn-outline-irun rounded-pill fs-4 py-6 w-100 mb-4">立即開始</a>
+          <a href="./login/user-login.html" class="btn btn-outline-irun rounded-pill fs-4 py-6 w-100">會員登入</a>
+        </div>
+      </div>
+    </div>
+    <!-- <ul class="nav nav-pills px-9 justify-content-between bg-white">
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="sport"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/assets/images/icons/sport.svg" alt="運動" />
+      </div>
+      運動
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="team"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/assets/images/icons/team.svg" alt="隊伍" />
+      </div>
+      隊伍
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="setting"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/assets/images/icons/nav-setting.svg" alt="設定" />
+      </div>
+      設定
+    </a>
+  </li>
+</ul>
+ -->
+    
+    <script>
+      setTimeout(() => {
+        const home = document.querySelector('.home');
+        const homeEntry = document.querySelector('.home-entry');
+        home.style.display = 'none';
+        homeEntry.style.display = 'flex';
+      }, 2000);
+    </script>
+  </body>
+</html>

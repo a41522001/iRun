@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+  <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+  <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+</head>
+<body>
+  <div class="setting">
+    <div class="wrap">
+      <p class="text-center mb-3 text-white fw-bold fs-3">個人設定</p>
+      <div class="py-8 bg-white rounded-3 d-flex align-items-center flex-column mb-4 position-relative">
+        <p class="mb-0 fs-7 text-secondary-800 fw-regular">名稱</p>
+        <p class="mb-0 fw-bold fs-3 text-primary-500 ms-7">Gina</p>
+        <img class="coach-img" src="/iRun/assets/coach-1-bed27c54.png" alt="coach">
+      </div>
+      <ul class="py-3 bg-white rounded-3 list-unstyled fw-regular flex-grow-1">
+        <a href="javascript:void(0);" id="shareButton" class="d-flex px-7 py-3 justify-content-between align-items-center text-decoration-none">
+          <div class="d-flex align-items-center">
+            <img src="/iRun/assets/share-f56b8fff.svg" alt="share">
+            <p class="ms-2 mb-0 text-secondary-800">分享APP給朋友</p>
+          </div>
+          <img class="arrow-right" src="/iRun/assets/arrow-down-2be0cd00.svg" alt="arrow-down">
+        </a>
+        <li class="d-flex px-7 py-3 justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="/iRun/assets/notice-3e153a89.svg" alt="notice">
+            <p class="ms-2 mb-0 text-secondary-800">設定時間提醒</p>
+          </div>
+          <img class="arrow-right" src="/iRun/assets/arrow-down-2be0cd00.svg" alt="arrow-down">
+        </li>
+        <li class="d-flex px-7 py-3 justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="/iRun/assets/star-9aaa6b02.svg" alt="star">
+            <p class="ms-2 mb-0 text-secondary-800">幫我們評分</p>
+          </div>
+          <img class="arrow-right" src="/iRun/assets/arrow-down-2be0cd00.svg" alt="arrow-down">
+        </li>
+        <li class="d-flex px-7 py-3 justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="/iRun/assets/mail-fd052f22.svg" alt="mail">
+            <p class="ms-2 mb-0 text-secondary-800">客服中心</p>
+          </div>
+          <img class="arrow-right" src="/iRun/assets/arrow-down-2be0cd00.svg" alt="arrow-down">
+        </li>
+        <li class="d-flex px-7 py-3 justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="/iRun/assets/paper-5a967f16.svg" alt="paper">
+            <p class="ms-2 mb-0 text-secondary-800">隱私權政策</p>
+          </div>
+          <img class="arrow-right" src="/iRun/assets/arrow-down-2be0cd00.svg" alt="arrow-down">
+        </li>
+        <li class="d-flex px-7 py-3 justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="/iRun/assets/paper-5a967f16.svg" alt="paper">
+            <p class="ms-2 mb-0 text-secondary-800">著作權政策</p>
+          </div>
+          <img class="arrow-right" src="/iRun/assets/arrow-down-2be0cd00.svg" alt="arrow-down">
+        </li>
+        <li class="d-flex px-7 py-3 justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="/iRun/assets/paper-5a967f16.svg" alt="paper">
+            <p class="ms-2 mb-0 text-secondary-800">服務條款</p>
+          </div>
+          <img class="arrow-right" src="/iRun/assets/arrow-down-2be0cd00.svg" alt="arrow-down">
+        </li>
+        <li class="d-flex px-7 py-3 justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="/iRun/assets/delete-71b66659.svg" alt="delete">
+            <p class="ms-2 mb-0 text-secondary-800">刪除帳號</p>
+          </div>
+          <img class="arrow-right" src="/iRun/assets/arrow-down-2be0cd00.svg" alt="arrow-down">
+        </li>
+      </ul>
+    </div>
+    <ul class="nav nav-pills px-9 justify-content-between bg-white">
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="sport"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/sport-5aae162f.svg" alt="運動" />
+      </div>
+      運動
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="team"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/team-23b6a1d5.svg" alt="隊伍" />
+      </div>
+      隊伍
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="setting"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/nav-setting-6a5c4528.svg" alt="設定" />
+      </div>
+      設定
+    </a>
+  </li>
+</ul>
+  </div>
+  
+  <script>
+    const currentUrl = window.location.href;
+    if (navigator.share) {
+      document.querySelector('#shareButton').addEventListener('click', async () => {
+        try {
+          await navigator.share({
+            title: 'iRun',
+            text: '來看看這個有趣的應用程式！',
+            url: currentUrl,
+          });
+        } catch (error) {
+          console.log('分享失敗', error);
+        }
+      });
+    } else {
+      console.log('Web Share API 不支援');
+    }
+  </script>
+</body>
+</html>

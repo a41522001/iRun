@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+  <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+  <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+</head>
+<body>
+  <div class="sport">
+    <style>
+  .loading {
+    background: rgba(41, 41, 41, 0.7);
+    display: flex;
+  }
+</style>
+<div class="loading z-3 fixed-top w-100 vh-100 align-items-center justify-content-center flex-column">
+  <div class="loaders">
+    <div class="loader">
+      <div class="ball-pulse-sync">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <div class="text-white fw-bold fs-4 mt-7">Loading</div>
+</div>
+<script>
+  setTimeout(() => {
+    document.querySelector('.loading').style.display = 'none';
+  }, 1250)
+</script>
+    <div class="container px-4 pt-4 pb-7 text-white fw-bold">
+      <div class="mb-6 d-flex justify-content-between align-items-center">
+        <div class="">
+          <p class="mb-3">今日已跑了</p>
+          <p class="mb-0 fs-1">540<span class="fs-6 ms-2">分鐘</span></p>
+        </div>
+        <div class="avatar-md bg-white">
+          <img class="img-fluid object-fit-cover" src="/iRun/assets/avatar1-138574ca.png" alt="avatar">
+        </div>
+      </div>
+      <ul class="list-unstyled mb-8 d-flex align-items-center">
+        <li class="py-custom flex-grow-1">
+          <p class="mb-1 fs-8">步數</p>
+          <p class="mb-0 fs-3">425<span class="ms-2 fs-7">步</span></p>
+        </li>
+        <li class="flex-grow-1 align-self-stretch"><span class="list-line"></span></li>
+        <li class="py-custom flex-grow-1">
+          <p class="mb-1 fs-8">距離</p>
+          <p class="mb-0 fs-3">1.54<span class="ms-2 fs-7">公里</span></p>
+        </li>
+        <li class="flex-grow-1 align-self-stretch"><span class="list-line"></span></li>
+        <li class="py-custom">
+          <p class="mb-1 fs-8">消耗熱量</p>
+          <p class="mb-0 fs-3">3000<span class="ms-2 fs-7">卡</span></p>
+        </li>
+      </ul>
+      <a href="../teaching/" class="btn bg-white text-primary-500 fs-4 rounded-pill fw-bold w-100 py-6">開始運動！</a>
+    </div>
+
+    <div class="bg-white rounded-top-3 px-4 pt-7 flex-grow-1">
+      <div class="d-flex justify-content-between align-items-center mb-7">
+        <p class="mb-0 text-primary-800 fs-4 fw-bold">歷史紀錄</p>
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary-300 dropdown-toggle py-3 rounded-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            時長
+          </button>
+          <ul class="dropdown-menu py-0 rounded-2">
+            <li class=""><a class="dropdown-item active rounded-top-2 p-3 fw-regular" href="#">顯示全部</a></li>
+            <li><a class="dropdown-item p-3 fw-regular border-top border-secondary-300" href="#">時長</a></li>
+            <li><a class="dropdown-item p-3 fw-regular border-top border-secondary-300" href="#">距離</a></li>
+            <li><a class="dropdown-item p-3 fw-regular border-top border-secondary-300" href="#">卡路里</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <img src="/iRun/assets/arrow-left-0c7e96ac.svg" alt="arrow-left">
+        <p class="mb-0 fw-bold text-secondary-800">2004/07/01～2024/07/30</p>
+        <img src="/iRun/assets/arrow-right-d96c4c68.svg" alt="arrow-right">
+      </div>
+      <div class="px-5">
+        <div class="mb-2">
+          <p class="mb-2 text-secondary-800 fs-7">這週一共跑了</p>
+          <p class="mb-0 text-primary-500 fs-1 fw-bold">500<span class="ms-2 fs-normal fs-7">分鐘</span></p>
+        </div>
+        <ul class="px-3 d-flex justify-content-between text-secondary-800 fs-8 list-unstyled mb-2">
+          <li>一</li>
+          <li>二</li>
+          <li>三</li>
+          <li>四</li>
+          <li>五</li>
+          <li>六</li>
+          <li>七</li>
+        </ul>
+        <ul class="chart-bar-list list-unstyled d-flex align-items-end justify-content-between mb-2 position-relative">
+          <li class="d-flex flex-column align-items-center">
+            <span class="mb-2 text-secondary-800 fs-8 fw-bold">60</span>
+            <div class="chart-bar" style="height: 84px;"></div>
+          </li>
+          <li class="d-flex flex-column align-items-center">
+            <span class="mb-2 text-secondary-800 fs-8 fw-bold">60</span>
+            <div class="chart-bar" style="height: 84px;"></div>
+          </li>
+          <li class="d-flex flex-column align-items-center">
+            <span class="mb-2 text-secondary-800 fs-8 fw-bold">35</span>
+            <div class="chart-bar" style="height: 69px;"></div>
+          </li>
+          <li class="d-flex flex-column align-items-center">
+            <span class="mb-2 text-secondary-800 fs-8 fw-bold">45</span>
+            <div class="chart-bar" style="height: 77px;"></div>
+          </li>
+          <li class="d-flex flex-column align-items-center">
+            <span class="mb-2 text-secondary-800 fs-8 fw-bold">20</span>
+            <div class="chart-bar" style="height: 49px;"></div>
+          </li>
+          <li class="d-flex flex-column align-items-center">
+            <span class="mb-2 text-secondary-800 fs-8 fw-bold">40</span>
+            <div class="chart-bar" style="height: 69px;"></div>
+          </li>
+          <li class="d-flex flex-column align-items-center">
+            <span class="mb-2 text-secondary-800 fs-8 fw-bold">20</span>
+            <div class="chart-bar" style="height: 43px;"></div>
+          </li>
+          <div class="bar-line"></div>
+        </ul>
+        <div class="d-flex align-items-center">
+          <div class="small-circle"></div>
+          <p class="mb-0 fs-8 text-secondary-800 ms-2">運動時間（分）</p>
+        </div>
+      </div>
+    </div>  
+    <ul class="nav nav-pills px-9 justify-content-between bg-white">
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="sport"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/sport-5aae162f.svg" alt="運動" />
+      </div>
+      運動
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="team"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/team-23b6a1d5.svg" alt="隊伍" />
+      </div>
+      隊伍
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="setting"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/nav-setting-6a5c4528.svg" alt="設定" />
+      </div>
+      設定
+    </a>
+  </li>
+</ul>
+  </div>
+  
+  <script>
+
+  </script>
+</body>
+</html>

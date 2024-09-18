@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+  <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+  <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+</head>
+<body>
+  <div class="teaching">
+    <div class="container px-4 pt-7">
+      <ul class="timeline-list">
+      </ul>
+      <p class="text-center text-secondary-300 fs-7 fw-bold mb-0">新手教學</p>
+    </div>
+    <main class="px-4 pt-7 flex-grow-1">
+      <img class="mx-auto d-block mb-9" src="/iRun/assets/step-4-ad111e92.png" alt="step-4">
+      <p class="text-center fs-3 fw-bold text-primary-500 mb-8">抬頭挺胸，稍微抬下巴</p>
+      <p class="fw-regular fs-7 text-secondary-800 mb-2">在開始超慢跑的時候，記得抬頭挺胸，微微抬下巴，目光放在遠方，讓呼吸更順暢，抬腳時會比較輕鬆。</p>
+    </main>
+    <div class="px-4 d-flex justify-content-between align-items-center">
+      <div class="px-4 d-flex align-items-center justify-content-center me-4">
+        <a class="text-secondary-300 text-decoration-none fw-bold fs-4 cursor-pointer" id="back">返回</a>
+      </div>
+      <a class="btn btn-irun flex-grow-1 py-6 rounded-pill" href="./teaching5.html">下一步</a>
+    </div>
+  </div>
+  
+  <script>
+    const timeline = [
+      { 1: true },
+      { 2: true },
+      { 3: true },
+      { 4: true },
+      { 5: false },
+    ]
+    const createTimeline = () => {
+      const timelineList = document.querySelector('.timeline-list');
+      timeline.forEach((item, index) => {
+        const li = document.createElement('li');
+        const circle = document.createElement('div');
+        const line = document.createElement('span');
+        li.classList.add('timeline-item');
+        circle.classList.add('timeline-circle');
+        line.classList.add('timeline-line');
+        if(item[index+1]) {
+          circle.classList.add('timeline-circle-active');
+          line.classList.add('timeline-line-active');
+        }else {
+          circle.classList.add('timeline-circle-original');
+          line.classList.add('timeline-line-original');
+        }
+        if(index !== 0) {
+          li.appendChild(line);
+        }
+        circle.textContent = index + 1;
+        timelineList.appendChild(li);
+        li.appendChild(circle);
+      })
+    }
+
+    addEventListener('DOMContentLoaded', () => {
+      createTimeline();
+    })
+    const back = document.querySelector('#back');
+    back.addEventListener('click', () => {
+      window.history.back();
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+  <style>
+    
+  </style>
+  <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+  <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+</head>
+<body>
+  <div class="start-sport">
+    <div class="cover"></div>
+    <video id="video" src="/iRun/assets/run-mp4-77b65be0.mp4" autoplay loop></video>
+    <div class="start-sport-wrap">
+      <div class="start-sport-time">
+        <div class="dropdown w-100" id="dropdown">
+          <button class="btn btn-secondary rounded-2 dropdown-toggle w-100 d-flex justify-content-between align-items-center bg-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            150 Bpm Music
+          </button>
+          <ul class="dropdown-menu w-100 rounded-2 p-0">
+            <li class="w-100"><a class="dropdown-item p-3 w-100 rounded-top-2" href="#">150 Bpm Music</a></li>
+            <li class="w-100"><a class="dropdown-item p-3 w-100 border-top border-bottom" href="#">180 Bpm Music</a></li>
+            <li class="w-100"><a class="dropdown-item p-3 w-100 rounded-bottom-2" href="#">200 Bpm Music</a></li>
+          </ul>
+        </div>
+        <div class="font-size-counter-xl text-center fw-bold text-primary-700" id="time">00:00</div>
+        <div class="d-flex align-items-center mb-4 mt-auto">
+          <div class="avatar">
+            <img class="img-fluid" src="data:image/png;base64,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" alt="avatar">
+          </div>
+          <div class="rounded-3 px-4 py-2 bg-white flex-grow-1">
+            <p class="mb-0 fs-7 fw-bold text-primary-700">快結束了，讓我們做最後衝刺吧！</p>
+          </div>
+        </div>
+      </div>
+      <div class="start-sport-dashboard">
+        <div class="container-fluid mb-4">
+          <div class="row">
+            <div class="col-6 px-0">
+              <div class="pe-4 fw-bold">
+                <p class="mb-3">步數</p>
+                <div class="d-flex justify-content-end align-items-end">
+                  <span class="font-size-counter-lg text-end mb-0" id="stepCount">0</span>
+                  <span class="ms-2 fs-6 pb-2">步</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 px-0">
+              <div class="ps-4 fw-bold">
+                <p class="mb-3">距離</p>
+                <div class="d-flex justify-content-end align-items-end">
+                  <span class="font-size-counter-lg text-end mb-0" id="distanceCount">0.00</span>
+                  <span class="ms-2 fs-6 pb-2">公里</span>
+                </div>
+              </div>
+            </div>        
+          </div>
+        </div>
+        <h2 class="fs-6 fw-bold mb-2">步頻 (步/分)</h2>
+        <ul class="m-0 mb-7 p-0 d-flex list-unstyled">
+          <li class="flex-grow-1 bg-white py-2 rounded-1 me-2 cursor-pointer">
+            <p class="mb-0 text-center fw-bold text-primary-500">150</p>
+          </li>
+          <li class="flex-grow-1 bg-white bg-opacity-20 py-2 rounded-1 me-2 cursor-pointer">
+            <p class="mb-0 text-center fw-bold">180</p>
+          </li>
+          <li class="flex-grow-1 bg-white bg-opacity-20 py-2 rounded-1 cursor-pointer">
+            <p class="mb-0 text-center fw-bold">200</p>
+          </li>
+        </ul>
+        <button class="btn w-100 py-6 fw-bold fs-4 text-white bg-white bg-opacity-20 rounded-pill" id="pause">暫停</button>
+        <div class="" id="continueAndEndContainer">
+          <a href="./start-fail.html" class="btn bg-white bg-opacity-20 text-white fs-4 fw-bold me-3 rounded-pill py-6 flex-grow-1">結束</a>
+          <button class="btn btn-irun rounded-pill py-6 fs-4 fw-bold flex-grow-1" id="continue">繼續</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  
+  <script>
+    const time = document.querySelector('#time');
+    const pauseBtn = document.querySelector('#pause');
+    const continueBtn = document.querySelector('#continue');
+    const continueAndEndContainer = document.querySelector('#continueAndEndContainer');
+    const stepCount = document.querySelector('#stepCount');
+    const distanceCount = document.querySelector('#distanceCount');
+    const video = document.querySelector('#video');
+    const cover = document.querySelector('.cover');
+    window.addEventListener('DOMContentLoaded', () => {
+      video.play();
+    });
+    continueAndEndContainer.style.display = 'none';
+    let interval;
+    let stepInterval;
+    let distanceInterval;
+    let distance = 0;
+    let totalSeconds = 30;
+    const updateTime = () => {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      time.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    };
+    const continueInterval = () => {
+      interval = setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          updateTime();
+        } else {
+          clearInterval(interval);
+          window.location.href = './start-success.html';
+        }
+      }, 1000);
+    };
+    const stepCountInterval = () => {
+      stepInterval = setInterval(() => {
+        stepCount.textContent = `${parseInt(stepCount.textContent) + 1}`;
+      }, 500);
+    }
+    const startDistanceInterval = () => {
+      distanceInterval = setInterval(() => {
+        distance += 0.01;
+        distanceCount.textContent = `${distance.toFixed(2)}`;
+      }, 1500);
+    }
+    continueBtn.addEventListener('click', () => {
+      continueInterval();
+      stepCountInterval();
+      startDistanceInterval();
+      continueAndEndContainer.style.display = 'none';
+      pauseBtn.style.display = 'block';
+      video.play();
+    });
+    pauseBtn.addEventListener('click', () => {
+      clearInterval(interval);
+      clearInterval(stepInterval);
+      clearInterval(distanceInterval);
+      continueAndEndContainer.style.display = 'flex';
+      pauseBtn.style.display = 'none';
+      video.pause();
+    });
+    continueInterval();
+    stepCountInterval();
+    startDistanceInterval();
+    //dropdown
+    const dropdown = document.querySelector('#dropdown');
+    dropdown.addEventListener('show.bs.dropdown', event => {
+      cover.style.display = 'block';
+      video.pause();
+      clearInterval(interval);
+      clearInterval(stepInterval);
+      clearInterval(distanceInterval);
+    }); 
+    dropdown.addEventListener('hide.bs.dropdown', event => {
+      cover.style.display = 'none';
+      video.play();
+      continueInterval();
+      stepCountInterval();
+      startDistanceInterval();
+    }); 
+    
+  </script>
+</body>
+</html>

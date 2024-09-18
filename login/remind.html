@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iRun - login</title>
+    <link  href="/path/to/picker.css" rel="stylesheet">
+    <script type="module" crossorigin src="/iRun/assets/login\\remind-c39b2b4e.js"></script>
+    <link rel="modulepreload" crossorigin href="/iRun/assets/main-43076d9d.js">
+    <link rel="modulepreload" crossorigin href="/iRun/assets/picker.esm-3f50a8c7.js">
+    <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+  </head>
+  <body>
+    <div class="container px-4 login-100vh">
+    <div class="d-flex flex-column justify-content-around login-100vh">
+        <div class="flex-grow-1 mt-8">
+            <ul class="timeline-list">
+            </ul>
+            <p class="text-center text-secondary-300 fs-7 fw-bold mb-0">只要幾步驟 開始屬於你的 AI 運動計畫</p>
+        </div>
+        <div class="d-flex flex-column align-items-center flex-grow-1">
+            <h5 for="coach-traits" class="fw-bold text-primary-500 mb-1 lh-base">設定每日運動提醒時間</h5>
+            <p class="fs-7 fw-regular text-secondary-800 lh-base">每天花15分鐘就能有效燃脂</p>
+            <img src="/iRun/assets/9359ab6fcd36b1c5-d495d41a.png" alt="ring" class="ring">
+            <div class="time-picker-wrapper">
+  <div class="js-inline-picker"></div>
+  <input type="text" id="timer" class="d-none">
+</div>
+
+
+        </div>
+        <div class="d-flex w-100">
+            <a href="coach-traits.html" class="login-a p-6 me-4"><h6 class="text-secondary-300 fw-bold lh-base">返回</h6></a>
+            <a href="ai-coach.html" class="btn btn-irun rounded-4 fs-4 fw-bold text-white mb-8 flex-grow-1 py-6 lh-base">下一步</a>
+        </div>
+    </div>
+</div>    
+    <script src="/path/to/picker.js"></script>
+    <script>
+      const timeline = [
+  { 1: true },
+  { 2: true },
+  { 3: true },
+  { 4: true },
+  { 5: true },
+  { 6: true },
+  { 7: false }
+]
+const createTimeline = () => {
+  const timelineList = document.querySelector('.timeline-list');
+  timeline.forEach((item, index) => {
+    const li = document.createElement('li');
+    const circle = document.createElement('div');
+    const line = document.createElement('span');
+    li.classList.add('timeline-item');
+    circle.classList.add('timeline-circle');
+    line.classList.add('timeline-line');
+    if(item[index+1]) {
+      circle.classList.add('timeline-circle-active');
+      line.classList.add('timeline-line-active');
+    }else {
+      circle.classList.add('timeline-circle-original');
+      line.classList.add('timeline-line-original');
+    }
+    if(index !== 0) {
+      li.appendChild(line);
+    }
+    circle.textContent = index + 1;
+    timelineList.appendChild(li);
+    li.appendChild(circle);
+  })
+}
+
+addEventListener('DOMContentLoaded', () => {
+  createTimeline();
+})
+new Picker(document.querySelector('.js-time-picker'), {
+  format: 'HH:mm',
+  headers: true,
+  text: {
+    title: 'Pick a time',
+  },
+});
+    </script>
+  </body>
+</html>

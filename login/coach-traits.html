@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iRun - login</title>
+    <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+    <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+  </head>
+  <body>
+    <div class="container px-4 login-100vh">
+    <div class="d-flex flex-column justify-content-around login-100vh">
+        <div class="flex-grow-1 mt-8">
+            <ul class="timeline-list">
+            </ul>
+            <p class="text-center text-secondary-300 fs-7 fw-bold mb-0">只要幾步驟 開始屬於你的 AI 運動計畫</p>
+        </div>
+        <form class="d-flex flex-column align-items-center flex-grow-1">
+            <label for="coach-traits" class="h5 fw-bold text-primary-500 mb-1 lh-base">偏好AI運動教練特質</label>
+            <p class="fs-7 fw-regular text-secondary-800 lh-base">最多可選三個</p>
+            <div class="row flex-wrap w-100 gx-2 gy-4" role="group" aria-label="Basic checkbox toggle button group">
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck1">嚴厲</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck2">友善</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck3" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck3">自信心</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck4" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck4">熱情</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck5" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck5">善溝通</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck6" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck6">同理心</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck7" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck7">溫柔</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck8" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck8">鼓勵</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck9" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck9">耐心</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck10" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck10">正向</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck11" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck11">紀律性</label>
+                </div>
+                <div class="col-4">
+                    <input type="checkbox" class="btn-check login-checkbox" id="btncheck12" autocomplete="off">
+                    <label class="btn btn-outline-irun rounded-4 login-text w-100" for="btncheck12">幽默</label>
+                </div>
+            </div>
+        </form>
+        <div class="d-flex w-100">
+            <a href="frequency.html" class="login-a py-6 px-4 me-4"><h6 class="text-secondary-300 fw-bold lh-base">返回</h6></a>
+            <a href="remind.html" class="btn btn-irun rounded-4 fs-4 fw-bold text-white mb-8 flex-grow-1 lh-base py-6">下一步</a>
+        </div>
+    </div>
+</div>    
+    <script>
+      const timeline = [
+  { 1: true },
+  { 2: true },
+  { 3: true },
+  { 4: true },
+  { 5: true },
+  { 6: false },
+  { 7: false }
+]
+const createTimeline = () => {
+  const timelineList = document.querySelector('.timeline-list');
+  timeline.forEach((item, index) => {
+    const li = document.createElement('li');
+    const circle = document.createElement('div');
+    const line = document.createElement('span');
+    li.classList.add('timeline-item');
+    circle.classList.add('timeline-circle');
+    line.classList.add('timeline-line');
+    if(item[index+1]) {
+      circle.classList.add('timeline-circle-active');
+      line.classList.add('timeline-line-active');
+    }else {
+      circle.classList.add('timeline-circle-original');
+      line.classList.add('timeline-line-original');
+    }
+    if(index !== 0) {
+      li.appendChild(line);
+    }
+    circle.textContent = index + 1;
+    timelineList.appendChild(li);
+    li.appendChild(circle);
+  })
+}
+
+addEventListener('DOMContentLoaded', () => {
+  createTimeline();
+})
+    </script>
+  </body>
+</html>

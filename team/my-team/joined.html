@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+  <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+  <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+</head>
+<body>
+  <div class="d-flex flex-column vh-100 team">
+    <style>
+  .loading {
+    background: rgba(41, 41, 41, 0.7);
+    display: flex;
+  }
+</style>
+<div class="loading z-3 fixed-top w-100 vh-100 align-items-center justify-content-center flex-column">
+  <div class="loaders">
+    <div class="loader">
+      <div class="ball-pulse-sync">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <div class="text-white fw-bold fs-4 mt-7">Loading</div>
+</div>
+<script>
+  setTimeout(() => {
+    document.querySelector('.loading').style.display = 'none';
+  }, 1250)
+</script>
+    <div class="flex-grow-1 p-4 overflow-y-auto position-relative team-wrapper">
+      <button type="button" class="btn p-0 pe-4 position-absolute end-0 border-0" data-bs-toggle="modal" data-bs-target="#leave-modal">
+        <img src="/iRun/assets/leave-eea5afed.svg" alt="離開隊伍" width="34" height="34">
+      </button>
+      <h2 class="fs-3 text-white fw-bold lh-base text-center mb-4">我的隊伍</h2>
+      <section class="container mb-8">
+  <div class="row">
+    <div class="card p-7 rounded-3 border-0 bg-white">
+      <div class="d-flex column-gap-4">
+        <div class="flex-shrink-0">
+          <img src="/iRun/assets/team-cover-1a0049a1.png" class="img-fluid mb-2" width="80" height="80" alt="180超超慢跑">
+          <div class="fw-regular fs-8 text-center team-card-icon text-secondary-800">
+            <img src="/iRun/assets/member-ad2aa7f5.svg" width="18" height="18" alt="人數">
+            3/5
+          </div>
+        </div>
+        <div class="card-body p-0 d-flex flex-column align-items-end">
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h3 class="card-title fs-6 fw-bold lh-base text-primary-800 mb-0">180超超慢跑</h3>
+              <span class="fs-8 fw-regular lh-1 text-secondary-800">ID<span class="d-inline-block ms-1">039389</span></span>
+            </div>
+            <p class="card-text fs-8 fw-regular text-secondary-800">每周固定3天超慢跑，大家一起減脂減肥、完成任務吧～～</p>
+          </div>
+          <button class="btn btn-irun rounded-pill py-1 px-4 mt-auto fs-8">邀請好友</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="card p-7 rounded-3">
+      <div class="card-body p-0">
+        <h3 class="card-title fs-6 fw-bold lh-base text-secondary-800 mb-4">每周任務
+          <span class="text-primary-800 d-inline-block ms-2">180步頻 每周3次</span>
+        </h3>
+        <div class="d-flex column-gap-4">
+          <img src="/iRun/assets/9359ab6fcd36b1c5-d495d41a.png" width="80" height="80" alt="goal">
+          <div class="flex-grow-1 text-center">
+            <p class="card-text fs-6 fw-bold mb-2 text-primary-800">本周已完成 <span>50</span> %</p>
+            <a href="../../start/" class="w-100 btn btn-irun rounded-pill fs-6 py-4">開始跑步</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <h2 class="fs-3 text-white fw-bold lh-base text-center mb-4">隊友列表</h2>
+      <ul class="d-flex flex-column row-gap-4 mb-0 list-unstyled container">
+        <li class="row">
+          <div class="card px-7 py-4 rounded-3 border-0 bg-gold-50" id="1">
+  <div class="card-body p-0 d-flex align-items-center column-gap-4">
+    <div class="bg-white overflow-hidden rounded-circle avatar">
+      <img src="/iRun/assets/coach-1-bed27c54.png" alt="Gina" class="img-fluid">
+    </div>
+    <p class="card-text fs-6 fw-regular mb-0 flex-grow-1 d-flex justify-content-between text-secondary-800"><span class="fw-bold">Gina</span> <span>本周已完成 <span class="fw-bold d-inline-block mx-1 text-gold-500">95</span> %</span></p>
+  </div>
+</div>
+
+        </li>
+        <li class="row">
+          <div class="card px-7 py-4 rounded-3 border-0 bg-primary-50" id="2">
+  <div class="card-body p-0 d-flex align-items-center column-gap-4">
+    <div class="bg-white overflow-hidden rounded-circle avatar">
+      <img src="/iRun/assets/coach-2-d3d462be.png" alt="美美" class="img-fluid">
+    </div>
+    <p class="card-text fs-6 fw-regular mb-0 flex-grow-1 d-flex justify-content-between text-secondary-800"><span class="fw-bold">美美</span> <span>本周已完成 <span class="fw-bold d-inline-block mx-1 text-gold-500">76</span> %</span></p>
+  </div>
+</div>
+
+        </li>
+        <li class="row">
+          <div class="card px-7 py-4 rounded-3 border-0 bg-primary-50" id="3">
+  <div class="card-body p-0 d-flex align-items-center column-gap-4">
+    <div class="bg-white overflow-hidden rounded-circle avatar">
+      <img src="/iRun/assets/coach-3-1ed8e98c.png" alt="小明" class="img-fluid">
+    </div>
+    <p class="card-text fs-6 fw-regular mb-0 flex-grow-1 d-flex justify-content-between text-secondary-800"><span class="fw-bold">小明</span> <span>本周已完成 <span class="fw-bold d-inline-block mx-1 text-gold-500">54</span> %</span></p>
+  </div>
+</div>
+
+        </li>
+      </ul>
+    </div>
+    <ul class="nav nav-pills px-9 justify-content-between bg-white">
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="sport"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/sport-5aae162f.svg" alt="運動" />
+      </div>
+      運動
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="team"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/team-23b6a1d5.svg" alt="隊伍" />
+      </div>
+      隊伍
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link fw-bold text-center"
+      href="setting"
+    >
+      <div class="p-2 rounded-circle mb-1">
+        <img src="/iRun/assets/nav-setting-6a5c4528.svg" alt="設定" />
+      </div>
+      設定
+    </a>
+  </li>
+</ul>
+
+  </div>
+  <div class="modal fade" id="leave-modal" tabindex="-1" aria-labelledby="確定離開隊伍 ?" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-7">
+          <h2 class="fs-4 fw-bold text-warning-300 lh-base mb-6">確定離開隊伍 ?</h2>
+          <div class="d-flex column-gap-4">
+            <button type="button" class="btn btn-outline-irun text-secondary-300 flex-grow-1 rounded-pill fw-regular" data-bs-dismiss="modal">否</button>
+            <a href="../../team/" class="btn btn-warning-300 flex-grow-1 rounded-pill text-white fw-bold">是</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

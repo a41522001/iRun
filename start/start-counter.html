@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+  <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+  <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+</head>
+<body>
+  <div class="start">
+    <div class="cover">
+      <div class="counter">
+        <span class="count"></span>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let count = 3;
+    const countElement = document.querySelector('.count');
+    countElement.style.animation = 'none';
+    countElement.textContent = count;
+    setTimeout(() => {   
+      for(let i = 0; i <= count; i++) {
+        setTimeout(() => {
+          if(i === count) {
+            countElement.textContent = 'GO';
+            countElement.style.animation = 'none'; // 停止動畫
+            return;
+          }
+          countElement.textContent = count - i;
+          countElement.style.animation = 'none'; // 重置動畫
+          void countElement.offsetWidth; // 觸發重繪
+          countElement.style.animation = 'countAnimation 1s linear'; // 重新應用動畫
+          if(i === count - 1) {
+            setTimeout(() => {
+              window.location.href = './start-sport.html';
+            }, 1000);
+          }
+        }, i * 1000);
+      }
+    }, 1000);
+
+  </script>
+</body>
+</html>

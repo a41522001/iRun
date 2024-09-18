@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+  <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+  <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+</head>
+<body>
+  <div class="teaching">
+    <div class="container px-4 pt-7">
+      <ul class="timeline-list">
+      </ul>
+      <p class="text-center text-secondary-300 fs-7 fw-bold mb-0">新手教學</p>
+    </div>
+    <main class="px-4 pt-7 flex-grow-1">
+      <img class="mx-auto d-block mb-9" src="/iRun/assets/step-1-aabe30ed.png" alt="step-1">
+      <p class="text-center fs-3 fw-bold text-primary-500 mb-8">能夠微笑地跑法</p>
+      <p class="fw-regular fs-7 text-secondary-800 mb-2">這個速度是能夠和笑著和身旁的朋友說話的速度，然後不會喘的速度，時速約在4~6公里之間。</p>
+      <p class="fw-regular fs-7 text-secondary-800 mb-0">如果做超慢跑還感覺得到累，那可以再放慢速度或是改用步行。</p>
+    </main>
+    <div class="px-4 d-flex justify-content-between align-items-center">
+      <div class="px-4 d-flex align-items-center justify-content-center me-4">
+        <a class="text-secondary-300 text-decoration-none fw-bold fs-4 cursor-pointer" id="back">返回</a>
+      </div>
+      <a class="btn btn-irun flex-grow-1 py-6 rounded-pill" href="./teaching2.html">下一步</a>
+    </div>
+  </div>
+  
+  <script>
+    const timeline = [
+      { 1: true },
+      { 2: false },
+      { 3: false },
+      { 4: false },
+      { 5: false },
+    ]
+    const createTimeline = () => {
+      const timelineList = document.querySelector('.timeline-list');
+      timeline.forEach((item, index) => {
+        const li = document.createElement('li');
+        const circle = document.createElement('div');
+        const line = document.createElement('span');
+        li.classList.add('timeline-item');
+        circle.classList.add('timeline-circle');
+        line.classList.add('timeline-line');
+        if(item[index+1]) {
+          circle.classList.add('timeline-circle-active');
+          line.classList.add('timeline-line-active');
+        }else {
+          circle.classList.add('timeline-circle-original');
+          line.classList.add('timeline-line-original');
+        }
+        if(index !== 0) {
+          li.appendChild(line);
+        }
+        circle.textContent = index + 1;
+        timelineList.appendChild(li);
+        li.appendChild(circle);
+      })
+    }
+
+    addEventListener('DOMContentLoaded', () => {
+      createTimeline();
+    })
+    const back = document.querySelector('#back');
+    back.addEventListener('click', () => {
+      window.history.back();
+    })
+  </script>
+</body>
+</html>

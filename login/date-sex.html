@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iRun - login</title>
+    <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+    <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+  </head>
+  <body>
+    <div class="container px-4 login-100vh">
+    <div class="d-flex flex-column justify-content-around login-100vh">
+        <div class="flex-grow-1 mt-8">
+            <ul class="timeline-list">
+            </ul>
+            <p class="text-center text-secondary-300 fs-7 fw-bold mb-0">只要幾步驟 開始屬於你的 AI 運動計畫</p>
+        </div>
+        <form class="text-center flex-grow-1">
+            <label for="body-height" class="h5 fw-bold text-primary-500 mb-4 lh-base">出生年份</label>
+            <select class="form-select rounded-2 mb-8 text-secondary-800 fw-regular" aria-label="">
+                <option selected disabled>請選擇出生年份</option>
+                <option value="1">2000</option>
+                <option value="2">2001</option>
+                <option value="3">2002</option>
+                <option value="4">2003</option>
+                <option value="5">2004</option>
+                <option value="6">2005</option>
+                <option value="7">2006</option>
+            </select>
+            <div class="d-flex flex-column">
+                <label for="body-height" class="h5 fw-bold text-primary-500 mb-4 lh-base">生理性別</label>
+                <div class="btn-group gap-4" data-toggle="buttons">
+                    <label class="btn btn-outline-irun d-flex flex-column align-items-center justify-content-center py-7 rounded-2 fw-bold login-label-color">
+                        <span class="material-symbols-outlined sex-icon">male</span>
+                        <input type="radio" name="gender" id="male" autocomplete="off" class="d-none"> 男性
+                    </label>
+                    <label class="btn btn-outline-irun d-flex flex-column align-items-center justify-content-center  py-7 rounded-2 fw-bold login-label-color">
+                        <span class="material-symbols-outlined sex-icon">female</span>
+                        <input type="radio" name="gender" id="female" autocomplete="off" class="d-none"> 女性
+                    </label>
+                </div>
+            </div>
+            </form>
+        <div class="d-flex w-100">
+            <a href="bodyinfo.html" class="login-a p-6 me-4"><h6 class="text-secondary-300 fw-bold lh-base">返回</h6></a>
+            <a href="frequency.html" class="btn btn-irun rounded-4 fs-4 fw-bold text-white mb-8 flex-grow-1 lh-base py-6">下一步</a>
+        </div>
+    </div>
+
+</div>    
+    <script>
+      const timeline = [
+  { 1: true },
+  { 2: true },
+  { 3: true },
+  { 4: false },
+  { 5: false },
+  { 6: false },
+  { 7: false }
+]
+const createTimeline = () => {
+  const timelineList = document.querySelector('.timeline-list');
+  timeline.forEach((item, index) => {
+    const li = document.createElement('li');
+    const circle = document.createElement('div');
+    const line = document.createElement('span');
+    li.classList.add('timeline-item');
+    circle.classList.add('timeline-circle');
+    line.classList.add('timeline-line');
+    if(item[index+1]) {
+      circle.classList.add('timeline-circle-active');
+      line.classList.add('timeline-line-active');
+    }else {
+      circle.classList.add('timeline-circle-original');
+      line.classList.add('timeline-line-original');
+    }
+    if(index !== 0) {
+      li.appendChild(line);
+    }
+    circle.textContent = index + 1;
+    timelineList.appendChild(li);
+    li.appendChild(circle);
+  })
+}
+
+addEventListener('DOMContentLoaded', () => {
+  createTimeline();
+})
+    </script>
+  </body>
+</html>

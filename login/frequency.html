@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iRun - login</title>
+    <script type="module" crossorigin src="/iRun/assets/main-43076d9d.js"></script>
+    <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+  </head>
+  <body>
+    <div class="container px-4 login-100vh">
+    <div class="d-flex flex-column justify-content-around login-100vh">
+        <div class="flex-grow-1 mt-8">
+            <ul class="timeline-list">
+            </ul>
+            <p class="text-center text-secondary-300 fs-7 fw-bold mb-0">只要幾步驟 開始屬於你的 AI 運動計畫</p>
+        </div>
+        <form class="d-flex flex-column align-items-center flex-grow-1">
+            <label for="frequency" class="h5 fw-bold text-primary-500 mb-4 lh-base">運動頻率</label>
+            <div class="w-100" data-toggle="buttons">
+                <input type="radio" name="frequency" id="beginner" autocomplete="off" class="d-none login-toggle">
+                <label for="beginner" class="btn btn-outline-irun d-flex flex-column align-items-center justify-content-center rounded-4 mb-4 login-text login-text">初階：沒有運動習慣</label>
+
+                <input type="radio" name="frequency" id="intermediate" autocomplete="off" class="d-none login-toggle"> 
+                <label for="intermediate" class="btn btn-outline-irun d-flex flex-column align-items-center justify-content-center rounded-4 mb-4 login-text login-text">中階：一週一至兩次</label>
+
+                <input type="radio" name="frequency" id="advanced" autocomplete="off" class="d-none login-toggle"> 
+                <label for="advanced" class="btn btn-outline-irun d-flex flex-column align-items-center justify-content-center rounded-4 login-text login-text">高階：一週運動三次以上</label>
+            </div>
+        </form>
+        <div class="d-flex w-100">
+            <a href="date-sex.html" class="login-a p-6 me-4"><h6 class="text-secondary-300 fw-bold lh-base">返回</h6></a>
+            <a href="coach-traits.html" class="btn btn-irun rounded-4 fs-4 fw-bold text-white mb-8 flex-grow-1 lh-base py-6">下一步</a>
+        </div>
+    </div>
+</div>    
+    <script>
+      const timeline = [
+  { 1: true },
+  { 2: true },
+  { 3: true },
+  { 4: true },
+  { 5: false },
+  { 6: false },
+  { 7: false }
+]
+const createTimeline = () => {
+  const timelineList = document.querySelector('.timeline-list');
+  timeline.forEach((item, index) => {
+    const li = document.createElement('li');
+    const circle = document.createElement('div');
+    const line = document.createElement('span');
+    li.classList.add('timeline-item');
+    circle.classList.add('timeline-circle');
+    line.classList.add('timeline-line');
+    if(item[index+1]) {
+      circle.classList.add('timeline-circle-active');
+      line.classList.add('timeline-line-active');
+    }else {
+      circle.classList.add('timeline-circle-original');
+      line.classList.add('timeline-line-original');
+    }
+    if(index !== 0) {
+      li.appendChild(line);
+    }
+    circle.textContent = index + 1;
+    timelineList.appendChild(li);
+    li.appendChild(circle);
+  })
+}
+
+addEventListener('DOMContentLoaded', () => {
+  createTimeline();
+})
+    </script>
+  </body>
+</html>

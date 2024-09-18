@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i run</title>
+  <script type="module" crossorigin src="/iRun/assets/team\\create\\details-84f240cb.js"></script>
+  <link rel="modulepreload" crossorigin href="/iRun/assets/main-43076d9d.js">
+  <link rel="modulepreload" crossorigin href="/iRun/assets/picker.esm-3f50a8c7.js">
+  <link rel="stylesheet" href="/iRun/assets/main-fa5ed5d5.css">
+</head>
+<link href="https://cdn.jsdelivr.net/npm/pickerjs@1.2.1/dist/picker.min.css" rel="stylesheet">
+<body>
+  <div class="container d-flex flex-column min-vh-100 px-4 py-8 team">
+    <div class="flex-grow-1 d-flex flex-column">
+      <div class="progress-wrapper mx-auto">
+        <div class="progress-ball finished">1</div>
+        <div class="progress" role="progressbar" aria-label="創建隊伍" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 100%"></div>
+        </div>
+        <div class="progress-ball current">2</div>
+      </div>
+      <h1 class="text-center text-secondary-300 fs-7 lh-base my-4">創建隊伍</h1>
+      <form action="../my-team/index.html" method="post" class="mt-8" id="team-create">
+        <div class="text-center mb-8">
+          <h2 class="fw-bold text-primary-500 fs-3 lh-base mb-4">步頻 (步/分)</h2>
+          <div class="d-flex justify-content-center column-gap-2 radio-group">
+            <input type="radio" class="btn-check" name="step-frequency" id="150" autocomplete="off" checked>
+            <label for="150">150</label>
+            <input type="radio" class="btn-check" name="step-frequency" id="180" autocomplete="off">
+            <label for="180">180</label>
+            <input type="radio" class="btn-check" name="step-frequency" id="200" autocomplete="off">
+            <label for="200">200</label>
+          </div>
+        </div>
+        <div class="text-center">
+          <h2 class="fw-bold text-primary-500 fs-3 lh-base mb-4">運動次數 (每周)</h2>
+          <div class="picker-wrapper exercise-frequency">
+  <div class="js-inline-picker exercise-frequency-picker"></div>
+  <input type="text" id="exercise-frequency" class="d-none">
+</div>
+
+
+        </div>
+      </form>
+    </div>
+    <div class="d-flex column-gap-4">
+      <a href="../../team/create/" class="btn btn-text-irun fs-4 py-6 px-5">返回</a>
+      <button type="submit" form="team-create" class="btn btn-irun flex-grow-1 rounded-pill fs-4 py-6">確認創建</button>
+    </div>
+  </div>
+  
+</body>
+</html>
