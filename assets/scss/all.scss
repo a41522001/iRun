@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
 @import "bootstrap/scss/functions";
 @import "./utils/variables";
 @import "./utils/variables-dark";
@@ -13,3 +14,7 @@
 @import "./pages/teaching/teaching.scss";
 @import "./pages/start/start.scss";
 @import "./component/time-picker";
+@import "./component/picker";
+@import "./pages/login/login";
+@import "./pages/login/user-login";
+@import "./pages/team/";

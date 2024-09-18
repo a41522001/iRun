@@ -329,7 +329,7 @@ $theme-colors: ( // "primary": $primary,
   "flamenco-600": #f06606,
 
   "warning-100": #ffc470,
-  "warning-300": #F02400);
+  "warning-300": #F5554B);
 
 // scss-docs-end theme-colors-map
 
@@ -1575,7 +1575,7 @@ $modal-inner-padding: $spacer !default;
 
 $modal-footer-margin-between: .5rem !default;
 
-$modal-dialog-margin: .5rem !default;
+$modal-dialog-margin: 1rem;
 $modal-dialog-margin-y-sm-up: 1.75rem !default;
 
 $modal-title-line-height: $line-height-base !default;

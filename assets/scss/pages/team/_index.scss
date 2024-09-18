@@ -1,0 +1,114 @@
+.team {
+  &-wrapper {
+    background: linear-gradient(179.32deg, #31CADF 0.53%, #13CCE9 35.53%, #00B4DD 90.28%);
+  }
+
+  .progress {
+    width: 121px;
+    height: 2px;
+    background-color: map-get($map: $theme-colors, $key: "secondary-300");
+
+    &-ball {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      color: map-get($map: $theme-colors, $key: "secondary-300");
+      font-weight: normal;
+      font-size: 14px;
+      border-radius: 50%;
+      border: 1px solid map-get($map: $theme-colors, $key: "secondary-300");
+      
+      &.current,
+      &.finished {
+        background-color: map-get($map: $theme-colors, $key: "primary-300");
+        color: $white;
+        border-color: map-get($map: $theme-colors, $key: "primary-300");
+        font-weight: bold;
+      }
+    }
+
+    &-bar[style="width: 100%"] {
+      background-color: map-get($map: $theme-colors, $key: "primary-300");
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-cover {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding: map-get($map: $spacers, $key: 2);
+    margin-inline: auto;
+
+    &-upload {
+      position: absolute;
+      line-height: 1;
+      background-color: $white;
+      color: map-get($map: $theme-colors, $key: "secondary-500");
+      padding: map-get($map: $spacers, $key: 2);
+      border: 1px solid map-get($map: $theme-colors, $key: "secondary-300");
+      border-radius: 50%;
+      right: -10px;
+      bottom: -6px;
+      cursor: pointer;
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  .radio-group {
+    label {
+      flex: auto;
+      color: map-get($map: $theme-colors, $key: "secondary-800");
+      padding: map-get($map: $spacers, $key: 3);
+      border: 1px solid map-get($map: $theme-colors, $key: "secondary-300");
+      border-radius: 50px;
+      font-weight: normal;
+    }
+
+    input:checked + label {
+      background-color: map-get($map: $theme-colors, $key: "primary-400");
+      color: $white;
+      border-color: map-get($map: $theme-colors, $key: "primary-400");
+      font-weight: bold;
+    }
+  }
+
+  .picker-wrapper {
+    position: relative;
+
+    &::before {
+      content: '次';
+      position: absolute;
+      top: 50%;
+      left: calc(50% + 60px + map-get($map: $spacers, $key: 4));
+      transform: translateY(-50%);
+      color: map-get($map: $theme-colors, $key: "secondary-800");
+      font-weight: bold;
+      font-size: map-get($map: $font-sizes, $key: 3);
+    }
+  }
+
+  .avatar {
+    width: 46px;
+    height: 46px;
+  }
+
+  .scrollbar-none {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @supports (scrollbar-width: none) {
+      scrollbar-width: none;
+    }
+  }
+}
