@@ -16,7 +16,10 @@
     border-radius: 50%;
   }
   .list-line {
-    padding: 0 1.5rem;
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
   }
   .dropdown-toggle {
     width: 140px;
@@ -26,13 +29,18 @@
   }
   .dropdown-menu {
     min-width: 140px;
-    li{
-      .dropdown-item {
-        width: auto;
-      }
-    }
   }
   .dropdown-item.active, .dropdown-item:active {
+    background-color: #EDFDFE;
+    color: #15ADC5;
+  }
+  .dropdown-item {
+    width: auto;
+    color: #464646;
+  }
+  .dropdown-item:active,
+  .dropdown-item:focus,
+  .dropdown-item:hover {
     background-color: #EDFDFE;
     color: #15ADC5;
   }
@@ -64,12 +72,4 @@
     background-color: #66DFED;
     margin-bottom: 2px;
   }
-}
-@media (max-width: 350px) {
-  .sport {
-    .list-line {
-      padding: 0 1rem;
-    }
-  }
-  
 }
