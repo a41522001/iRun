@@ -11,7 +11,7 @@
 <body>
   <div class="start-sport">
     <div class="cover"></div>
-    <video id="video" src="../../assets/mp4/run-mp4.mp4" autoplay loop></video>
+    <video id="video" src="../../assets/mp4/run-mp4.mp4" autoplay loop playsinline muted></video>
     <div class="start-sport-wrap">
       <div class="start-sport-time">
         <div class="dropdown w-100" id="dropdown">
@@ -89,9 +89,7 @@
     const distanceCount = document.querySelector('#distanceCount');
     const video = document.querySelector('#video');
     const cover = document.querySelector('.cover');
-    window.addEventListener('DOMContentLoaded', () => {
-      video.play();
-    });
+    video.play();
     continueAndEndContainer.style.display = 'none';
     let interval;
     let stepInterval;
