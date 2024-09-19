@@ -1,6 +1,7 @@
 import './assets/scss/all.scss';
-import 'bootstrap/dist/js/bootstrap.min.js';
+// import 'bootstrap/dist/js/bootstrap.min.js';
 import 'loaders.css/loaders.min.css';
+import bootstrapMin from 'bootstrap/dist/js/bootstrap.min.js';
 
 export const currentBase = '/iRun/';
 
@@ -28,3 +29,13 @@ navLinks.forEach((navLink) => {
     window.location.href = `${currentBase}${to}/`;
   });
 });
+
+const notificationModalEl = document.getElementById('notification-modal');
+
+if (notificationModalEl) {
+  const notificationModal = new bootstrapMin.Modal(notificationModalEl);
+  
+  window.addEventListener('DOMContentLoaded', () => {
+    notificationModal.show();
+  });
+}
