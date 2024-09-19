@@ -10,16 +10,8 @@
             <input type="text" name="nickname" id="nickname" placeholder="請輸入名稱" class="form-control rounded-2 fw-regular text-secondary-800" required>
         </form>
             <div class="d-flex w-100">
-                <a class="login-a p-6 me-4"><h6 class="text-secondary-300 fw-bold">返回</h6></a>
+                <a href="/iRun/index.html" class="login-a p-6 me-4"><h6 class="text-secondary-300 fw-bold">返回</h6></a>
                 <a href="bodyinfo.html" class="btn btn-irun rounded-4 fs-4 fw-bold text-white mb-8 flex-grow-1 py-5">下一步</a>
             </div>
     </div>
 </div>
-<script type="module">
-    import { currentBase } from "../../main.js"
-    const backLink = document.querySelector('.login-a');
-	backLink.addEventListener('click', (e) => {
-		e.preventDefault();
-		window.location.href = `${currentBase}index.html`;
-	});
-</script>

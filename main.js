@@ -1,6 +1,5 @@
 import './assets/scss/all.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import 'pickerjs/dist/picker.css';
 import 'loaders.css/loaders.min.css';
 
 export const currentBase = '/iRun/';
