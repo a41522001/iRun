@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iRun - login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pickerjs@1.2.1/dist/picker.min.css">
   </head>
   <body>
     <%- include('./layout/login/remind'); -%>
     <script type="module" src="../../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pickerjs@1.2.1/dist/picker.min.js"></script>
     <script>
+      new Picker(document.querySelector('.js-inline-picker'), {
+        container: '.time-picker-wrapper',
+        controls: false,
+        format: 'mm:ss',
+        inline: true,
+      });
+
       const timeline = [
   { 1: true },
   { 2: true },
